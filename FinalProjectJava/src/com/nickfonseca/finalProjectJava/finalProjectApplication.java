@@ -2,7 +2,6 @@ package com.nickfonseca.finalProjectJava;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-//import com.sun.java_cup.internal.runtime.Scanner;
 
 public class finalProjectApplication {
 	//list of tasks = an array
@@ -25,28 +24,33 @@ public class finalProjectApplication {
 			int menuChoice = readChoice();
 			
 			switch(menuChoice) {
-			case 1:				
+			case 1:
+				//1: add a task
 				listTasks();
 				System.out.println("Item to add: ");
 				String AddId = sc.nextLine();
 				addTask(AddId);
 				break;
 			case 2:
+				//2: remove task
 				listTasks();
 				System.out.println("Item to remove: ");
 				int RemoveId = readChoice();
 				removeTask(RemoveId);
 				break;
 			case 3:
+				//3: mark as complete
 				listTasks();
 				System.out.println("Items Not Done: ");
 				int CompleteId = readChoice();
 				completeTask(CompleteId);
 				break;
 			case 4:
+				//4: list tasks
 				listTasks();
 				break;
 			case 0:
+				//loop until user exits
 				running = false;
 				System.out.println("--EXIT PROGRAM--");
 				break;
@@ -57,15 +61,6 @@ public class finalProjectApplication {
 			//running = false;
 		} while(running);
 		
-
-		
-		//loop until user exits
-		//display menu = sysout 
-		//1: add a task
-		//2: remove task
-		//3: mark as complete
-		//4: list tasks
-		//user prompt: = scanner
 
 	}
 	public static void displayMenu(){
@@ -98,5 +93,4 @@ public class finalProjectApplication {
 	public static void addTask(String name) {
 		task.add(new Tasker(name));
 	}
-
 }

@@ -29,5 +29,4 @@ public class Tasker {
 	public String toString() {
 		return this.name + (this.complete ? "(Task Done)" : "");
 	}
-
 }
